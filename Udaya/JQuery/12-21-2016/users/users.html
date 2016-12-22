@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> add users </title>
+    <link rel="stylesheet" href="users.css">
+    <script type="text/javascript" src = "https://code.jquery.com/jquery-2.x-git.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('button').click(function() {
+
+            // var x = $("input").serializeArray();
+            //
+            // console.log(x);
+
+            /* Act on the event */
+            // $('#1t').append(val('#fname'));
+            var x = $('#fname').val();
+            $('#1t').text(x)
+            var y = $('#lname').val();
+            $('#2t').text(y)
+            var z= $('#e-mail').val();
+            $('#3t').text(y);
+            var w = $('#contact').val();
+            $('#4t').text(y);
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div class ="table1">
+    <table id = "t1">
+      <tr>
+          <th id="f_name">First Name</th>
+          <th id ="l_name">Last Name</th>
+          <th id ="email">Email Address</th>
+          <th id ="contact">Contact</th>
+      </tr>
+      <tr >
+          <td id = "1t"></td>
+          <td id = "2t"></td>
+          <td id = "3t"></td>
+          <td id = "4t"></td>
+        <!-- <td id ="1t"> </td> -->
+      </tr>
+      <div class="row"></div>
+    </table>
+  </div>
+
+  <div class="form1">
+  First Name:  <input type="text" name="fname"id="fname" value="">
+  Last Name:   <input type="text" name="lname"id="lname" value="">
+  Email: <input type="text" name="e-mail"id="e-mail" value="">
+  Phone:  <input type="text" name="phone"id="contact" value="">
+  <button type="button" name="button">Add User</button>
+  </div>
+  </body>
+</html>
