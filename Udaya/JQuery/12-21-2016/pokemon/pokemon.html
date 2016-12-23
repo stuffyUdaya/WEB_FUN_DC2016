@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>pokemon images</title>
+      <link rel="stylesheet" href="pokemon.css">
+      <script type="text/javascript" src = "https://code.jquery.com/jquery-2.x-git.min.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function() {
+        var z = "<li class = poke ><img src ="
+        var x = "http://pokeapi.co/media/img/"
+        var y = ".png/>";
+        for(var i =1; i<152; i++){
+          $('.image').append(z+x+i+y)
+        } });
+
+      </script>
+  </head>
+  <body>
+    <h1> Pokemon Images</h1>
+    <div>
+      <ul class = "image" >
+
+
+      </ul>
+    </div>
+
+  </body>
+</html>

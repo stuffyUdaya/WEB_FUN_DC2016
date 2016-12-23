@@ -1,0 +1,10 @@
+.poke{
+  display: inline-table;
+}
+h1{
+  font-weight: normal;
+  font-family: fantasy;
+  color: orangered;
+  font-size: 30px;
+  text-align: center;
+}

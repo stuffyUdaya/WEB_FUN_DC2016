@@ -16,13 +16,13 @@
             /* Act on the event */
             // $('#1t').append(val('#fname'));
             var x = $('#fname').val();
-            $('#1t').text(x)
+
             var y = $('#lname').val();
-            $('#2t').text(y)
+
             var z= $('#e-mail').val();
-            $('#3t').text(y);
-            var w = $('#contact').val();
-            $('#4t').text(y);
+
+            var w = $('#phone').val();
+              $("#t1").append('<tr><td>'+x+'</td><td>'+y+'</td><td>'+z+'</td><td>'+w+'</td></tr>');
           });
       });
     </script>
@@ -36,13 +36,7 @@
           <th id ="email">Email Address</th>
           <th id ="contact">Contact</th>
       </tr>
-      <tr >
-          <td id = "1t"></td>
-          <td id = "2t"></td>
-          <td id = "3t"></td>
-          <td id = "4t"></td>
-        <!-- <td id ="1t"> </td> -->
-      </tr>
+
       <div class="row"></div>
     </table>
   </div>
@@ -51,7 +45,7 @@
   First Name:  <input type="text" name="fname"id="fname" value="">
   Last Name:   <input type="text" name="lname"id="lname" value="">
   Email: <input type="text" name="e-mail"id="e-mail" value="">
-  Phone:  <input type="text" name="phone"id="contact" value="">
+  Phone:  <input type="number" name="phone"id="phone" value="">
   <button type="button" name="button">Add User</button>
   </div>
   </body>

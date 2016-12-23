@@ -1,0 +1,45 @@
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>users</title>
+    <link rel="stylesheet" href="../css/jquery_users.css">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#b_one').click(function () {
+            var x = $( ":input" ).serializeArray();
+            $.each(x, function(i, field){
+                $(".field").append(field.value);
+                $(".field").append('<div id="spacer"></div>')
+            });
+            $(".field").append('<br>')
+        })
+    });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <ul>
+                <li>First Name</li>
+                <li>Last Name</li>
+                <li>Email Address</li>
+                <li>Contact #</li>
+            </ul>
+        </div>
+        <div class="field"></div>
+        <div class="the_form">
+            <h1>Add Users</h1>
+            <hr>
+                <h5>First Name:<input type="text" value="fame" name="fname"></h5>
+                <h5>Last Name:<input type="text" value="lname" name="lname"></h5>
+                <h5>Email:<input type="text" value="email" name="email"></h5>
+                <h5>Contact #:<input type="text" value="contact" name="contact"></h5>
+                <h5><button type="button" id='b_one'>SUBMIT</button></h5>
+        </div>
+    </div>
+</body>
+</html>

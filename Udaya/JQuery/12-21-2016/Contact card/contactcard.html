@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>contact card</title>
+    <link rel="stylesheet" href="contact.css">
+    <script type="text/javascript" src = "https://code.jquery.com/jquery-2.x-git.min.js">
+      </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $(document).on('click', 'button', function(event) {
+          event.preventDefault();
+          var x = $('.form1').serializeArray();
+          var y = x[0].value +" " +x[1].value;
+          var z = "Click here to see Description..."
+          $('.div2').append('<div><h2>'+y+ '</h2><h6 class ="dynh">'+z+'</h6><p class ="dynh">'+x[2].value+'</p></div>');
+          /* Act on the event */
+
+        });
+                $(document).on('click','.dynh',function() {
+                  event.preventDefault();
+                  /* Act on the event */
+                  // $('.dynp').toggle('slow');
+                    $(this).siblings(".dynh").toggle('slow');
+
+                });
+
+                                                              // $('h2').click(function(){
+                                                              //   $(this).siblings().toggle();
+                                                              // })
+        });
+
+        // $('h2').hover(function(){
+        //   $('p').toggle("slow");
+        // });
+
+
+      // });
+
+    </script>
+  </head>
+  <body background="body.jpg">
+
+    <span><h1>Contact Card </h1> </span>
+    <div class="div1">
+
+      <form class="form1" action="####" method="post">
+        First Name:<input type="text" name="fname" value="" placeholder="First Name"> <br>
+        Last Name:<input type="text" name="lname" value=""placeholder="Last Name"> <br>
+        Description:<br>
+         <textarea name="des" rows="8" cols="80"placeholder="click here to add Description..."></textarea><br>
+        <button type="button" name="button">Add User</button>
+      </form>
+
+    </div>
+
+    <div class="div2">
+
+    </div>
+  </body>
+</html>
